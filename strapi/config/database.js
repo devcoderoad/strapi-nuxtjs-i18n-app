@@ -2,11 +2,11 @@ module.exports = ({ env }) => ({
   connection: {
     client: "postgres",
     connection: {
-      host: env("DATABASE_HOST", "john.db.elephantsql.com"),
+      host: env("DATABASE_HOST", "localhost"),
       port: env.int("DATABASE_PORT", 5432),
-      database: env("DATABASE_NAME", "bxgnmxyi"),
-      user: env("DATABASE_USERNAME", "bxgnmxyi"),
-      password: env("DATABASE_PASSWORD", "sJ_qFpCBGIg_qt88juXHGMP7jQUTb6jk"),
+      database: env("DATABASE_NAME", "postgres"),
+      user: env("DATABASE_USERNAME", "postgres"),
+      password: env("DATABASE_PASSWORD", "postgres"),
       schema: env("DATABASE_SCHEMA", "public"),
       ssl: env.bool("DATABASE_SSL", true),
       charset: env("DATABASE_CHARSET", "utf8mb4_unicode_ci"),
