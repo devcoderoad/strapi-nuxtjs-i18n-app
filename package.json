@@ -1,0 +1,24 @@
+{
+  "name": "strapi-nuxtjs-i18n-app",
+  "version": "1.0.0",
+  "description": "Multilingual Strapi CMS Web Application with NuxtJS",
+  "repository": "https://github.com/devcoderoad/strapi-nuxtjs-i18n-app.git",
+  "author": "devdef20@gmail.com <devdef20@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "develop:strapi": "yarn --cwd strapi develop",
+    "develop:nuxt": "wait-on http://localhost:1337/admin && yarn --cwd web dev",
+    "develop": "cross-env FORCE_COLOR=1 npm-run-all -l -p develop:*",
+    "build:strapi": "yarn --cwd strapi build",
+    "build:nuxt": "yarn --cwd web build",
+    "build": "cross-env FORCE_COLOR=1 npm-run-all -l -p build:*",
+    "start:strapi": "yarn --cwd strapi start",
+    "start:nuxt": "wait-on http://localhost:1337/admin && yarn --cwd web generate && yarn --cwd web start",
+    "start": "cross-env FORCE_COLOR=1 npm-run-all -l -p start:*"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "npm-run-all": "^4.1.5",
+    "wait-on": "^6.0.1"
+  }
+}

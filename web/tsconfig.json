@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    "target": "ES2018",
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "lib": ["ESNext", "ESNext.AsyncIterable", "DOM"],
+    "esModuleInterop": true,
+    "allowJs": true,
+    "checkJs": false,
+    "sourceMap": true,
+    "strict": true,
+    "noEmit": true,
+    "noImplicitAny": false,
+    "experimentalDecorators": true,
+    "baseUrl": ".",
+    "paths": {
+      "~/*": ["./*"],
+      "@/*": ["./*"],
+      "~/static/*": ["./static/*"],
+      "~/components/*": ["./components/*"],
+      "~/constants": ["./constants"]
+    },
+    "types": ["@nuxt/types", "@types/node", "@nuxtjs/i18n", "@nuxtjs/date-fns"]
+  },
+  "include": [
+    "types/gql.d.ts",
+    "types/vue-shim.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.js"
+  ],
+  "exclude": ["node_modules", ".nuxt", "dist"]
+}
